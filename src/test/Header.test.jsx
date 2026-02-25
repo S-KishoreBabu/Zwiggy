@@ -23,7 +23,7 @@ describe("testing the header Component",()=> {
         expect(about).toBeInTheDocument()
         expect(cart).toBeInTheDocument()
     })
-    test("Testing Dish Card : ",()=>{
+    it("Testing Dish Card : ",()=>{
         render(
             <DishCard/>
         )
