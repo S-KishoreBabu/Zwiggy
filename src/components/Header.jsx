@@ -1,10 +1,11 @@
 import { useSelector } from 'react-redux';
 import logo from '../assets/logo.png'
 import { NavLink,Link } from 'react-router-dom';
-
+import { cartContext } from '../utils/UserContext';
+import { useContext } from 'react';
 let Header = () => {
-    const cart = useSelector((store)=>store.cart.items);
-
+    const cartItems = useSelector((store)=>store.cartSlice.items);
+    const {cartCount} = useContext(cartContext);
     return (
         <header className="sticky top-0  flex justify-between items-center w-auto shadow-2xl  px-10 backdrop-blur z-10 "> 
             <NavLink  to="/">
@@ -20,7 +21,7 @@ let Header = () => {
                     <a href="#">Notification</a>
                 </div>
                 <div className="linkBox mr-3 font-bold">
-                    <NavLink to="/cart">Cart ({cart.length})</NavLink>
+                    <NavLink to="/cart">Cart ({cartItems?.length})[{cartCount}]</NavLink>
                 </div>
             </div>
         </header>

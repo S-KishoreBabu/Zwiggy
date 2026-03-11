@@ -8,5 +8,6 @@ let Banner = () => {
       {/* <img src={ img??banner} alt="banner"/> */}
     </div>
   );
+  
 }
 export default Banner

@@ -7,7 +7,7 @@ function ErrorPage(){
                 <img src={ErrorImg} className='h-100 ' alt="Error" />
             </div>
         </div>
-    );
+    )
 }
 
 export default ErrorPage

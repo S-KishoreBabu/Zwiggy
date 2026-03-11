@@ -2,23 +2,17 @@ import React, {createContext, useState } from 'react'
 import User from './components/User'
 import UserClass from './components/UserClass'
 
-export const sanjayContext = createContext({sname:"sanjay",age:20});
+// export const sanjayContext = createContext({sname:"sanjay",age:20});
 // import { userContext } from './utils/UserContext'
 const About = () => {
   // const userName = useContext(userContext);
   // console.log("UserName : ",userName.loginName);
 
-  
-
-
   const [flag,setFlag] = useState(false);
   return (
     <div>
-        {/* <h2 style={{color:"red"}}>About us</h2>
-        <h1> Naangathanda LEOs</h1> */}
-        {/* <sanjayContext.Provider > */}
           <User name = {"kishore Babu"} role = {"Frontend Developer"} />
-          <User name = {"Vigneshwaran"} role = {"BackEnd Developer"}/>
+          <User name = {"Vigneshwaran"} role = {"BackEnd Developer"} />
           <UserClass name={"Gowthaman"} role = {"BackEnd Developer"} />
         {/* </sanjayContext.Provider> */}
         {/* {flag?()} */}

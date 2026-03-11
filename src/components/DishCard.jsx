@@ -23,7 +23,7 @@ const DishCard = ({dData}) => {
         <div className="dishImage  w-5/24 flex flex-col items-center">
             <img className='h-40 w-full rounded-2xl'  src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_500,h_500,c_fit/${data.imageId}`} alt="" />
             {/* <button  className='relative w-30 h-11 0 bottom-4 px-5 font-bold text-[#1ba672] py-1 bg-white border-1 cursor-pointer border-[#ccc] rounded-md hover:bg-[#c7c7c7]'  onClick={()=>{handleAddItem(dData)}}>ADD</button> */}
-            <Stepper/>
+            <Stepper dData = {dData}/>
             <p className='text-[#505050] relative bottom-4 text-sm'>customisable</p>
         </div>
         

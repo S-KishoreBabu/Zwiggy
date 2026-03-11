@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import {  sanjayContext } from "../About";
+// import {  sanjayContext } from "../About";
 
 const User = ({name,role}) => {
     // const [userInfo,setUserInfo] = useState({
@@ -13,9 +13,6 @@ const User = ({name,role}) => {
     //     let obj = await data.json();
     //     setUserInfo(obj);
     // }
-    const varii = useContext(sanjayContext)
-   
-    console.log("Sname",varii);
 
     return (
             <div className="user-card">
