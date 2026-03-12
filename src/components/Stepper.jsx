@@ -2,8 +2,10 @@ import React, { useContext, useState } from 'react'
 import { addItems } from '../utils/cartSlice';
 import { useDispatch } from 'react-redux';
 import { cartContext } from '../utils/UserContext';
+import Modal from './Modal';
 const Stepper = ({dData}) => {
     const [count,setCount] = useState(0);
+    const [showPopup,setShowPopup] = useState(false);
     const dispatch = useDispatch()
     const {cartCount,setCartCount} = useContext(cartContext)
     const increment = (payload) =>{
@@ -11,8 +13,12 @@ const Stepper = ({dData}) => {
             dispatch(addItems(payload))
         }
         setCartCount(cartCount+1);
-        window.alert(payload)
+        // window.alert(payload)
         setCount(count+1);
+        setShowPopup(true);
+        setTimeout(()=>{
+            setShowPopup(false);
+        },1000)
     }
     const decrement = () =>{
         setCount(count-1);
@@ -28,6 +34,8 @@ const Stepper = ({dData}) => {
                 </div>
                 <button className='w-1/3 h-full cursor-pointer hover:bg-[#c7c7c7]' onClick={()=>{increment(dData.card.info.name)}} >+</button>
             </div>)}
+            {showPopup && (<Modal><h1>{dData.card.info.name} is added to the cart!</h1></Modal>)}
+
         </div>
 
   )
