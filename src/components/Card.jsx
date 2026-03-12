@@ -7,7 +7,7 @@ let Card = ({obj})=>{
   let price = productObj.costForTwo;
   let imgId = productObj.cloudinaryImageId;
   return (
-    <div className="card w-60 h-70 bg-white shadow-[0_0_8px_-5px_rgba(0,0,0)] rounded-2xl overflow-hidden transition-shadow duration-[250ms] ease-in-out cursor-pointer hover:-translate-y-2 hover:shadow-[0_14px_28px_rgba(255,0,0,0.12)]">
+    <div className="card w-60 h-70 bg-white shadow-[0_0_8px_-5px_rgba(0,0,0)] rounded-2xl overflow-hidden transition-shadow delay-250 duration-250 ease-in-out cursor-pointer hover:-translate-y-2 hover:shadow-[0_14px_28px_rgba(255,0,0,0.12)]">
       <img className="w-full h-42.5 object-cover" src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_500,h_500,c_fit/${imgId}`} alt="Cards" />
       <div className="details p-4">
         <h1 className="text-[1.05rem] mb-1.2 text-[#222] font-150" >{name}</h1>

@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import { addItems } from '../utils/cartSlice';
 import { useDispatch } from 'react-redux';
 import { cartContext } from '../utils/UserContext';
+import Modal from './Modal';
 const Stepper = ({dData}) => {
     const [count,setCount] = useState(0);
     const dispatch = useDispatch()
@@ -28,6 +29,7 @@ const Stepper = ({dData}) => {
                 </div>
                 <button className='w-1/3 h-full cursor-pointer hover:bg-[#c7c7c7]' onClick={()=>{increment(dData.card.info.name)}} >+</button>
             </div>)}
+            {/* {count>1 ? <Modal>Ordered {dData.card.info.name}</Modal>:<></>} */}
         </div>
 
   )
