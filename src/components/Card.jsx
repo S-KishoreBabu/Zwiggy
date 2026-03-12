@@ -23,7 +23,7 @@ let Card = ({obj})=>{
   );
 }
 
-export const PromotedCard = (Card)=>{
+export const PromotedCard = ()=>{
   return (props)=>{
     return (
       <div>
