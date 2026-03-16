@@ -1,9 +1,13 @@
-import React, { useState } from 'react'
+import React, { useReducer, useState } from 'react'
 
 const ReactPractice = () => {
     const [grandParentColor,setGrandParentColor] = useState("coral");
     const [parentColor,setParentColor] = useState("lightyellow");
     const [childColor,setChildColor] = useState("lightgreen");
+    const [numCount,reducer] = useReducer(dispatch,0);
+    const reducer = () =>{
+        
+    }
     let count = 0;
     const grandParent = ()=>{
         console.log("grandParent");
@@ -56,6 +60,12 @@ const ReactPractice = () => {
         <button id='resetbtn' onClick={reset} className='mt-8 px-6 py-3 bg-linear-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 active:scale-95'>
             Reset Colors
         </button>
+        <div className='p-20'>
+            <h1>Count : {numCount} by useReducer hook</h1>
+            <button className='px-4 py-1 border font-extrabold'>+</button>
+            <button className='px-4 py-1 border font-extrabold'>-</button>
+            <button className='px-4 py-1 border font-extrabold'>reset</button>
+        </div>
     </div>
   )
 }
