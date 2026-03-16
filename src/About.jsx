@@ -58,7 +58,7 @@ const About = () => {
           </div>
 
           {/* About ZWIGGY Card */}
-          <div className="bg-gradient-to-br from-orange-500/10 to-red-500/10 backdrop-blur-lg border border-orange-500/30 p-8 rounded-3xl shadow-2xl relative overflow-hidden group hover:border-orange-500/50 transition duration-500 animate-fade-in-up flex flex-col" style={{ animationDelay: '0.4s' }}>
+          <div className="bg-linear-to-br from-orange-500/10 to-red-500/10 backdrop-blur-lg border border-orange-500/30 p-8 rounded-3xl shadow-2xl relative overflow-hidden group hover:border-orange-500/50 transition duration-500 animate-fade-in-up flex flex-col" style={{ animationDelay: '0.4s' }}>
             <div className="absolute top-0 right-0 w-40 h-40 bg-orange-500/20 rounded-bl-full -z-10 group-hover:scale-110 transition-transform duration-700"></div>
             
             <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-8 flex items-center">
@@ -89,7 +89,7 @@ const About = () => {
             </ul>
 
             <div className="mt-auto">
-              <button className="w-full py-4 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 rounded-xl font-bold text-xl shadow-lg shadow-orange-500/30 transform hover:-translate-y-1 transition duration-300">
+              <button className="w-full py-4 bg-linear-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 rounded-xl font-bold text-xl shadow-lg shadow-orange-500/30 transform hover:-translate-y-1 transition duration-300">
                 Explore Foods
               </button>
             </div>
