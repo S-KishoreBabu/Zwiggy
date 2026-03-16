@@ -1,8 +1,12 @@
 import React from 'react'
-import ReactDom from "react-dom"
+import {createPortal} from 'react-dom'
 const Modal = ({children}) => {
-  const modalRoot = document.getElementById("modal-root");
-    return ReactDom.createPortal(<div className="modal">{children}</div>,modalRoot)
+    const Modaldiv = document.getElementById("modal-root");
+    return createPortal(
+        <div id="popUp" className='z-9999 bg-amber-50 shadow  fixed top-0 h-10 p-2 w-100'>
+            {children}
+        </div>
+    , Modaldiv)
 }
 
 export default Modal

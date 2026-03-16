@@ -8,7 +8,8 @@ import { createBrowserRouter , RouterProvider , Outlet} from 'react-router-dom'
 import About from './About.jsx'
 import RestaurantMenu from './components/RestaurantMenu.jsx'
 import Cart from './components/Cart.jsx'
-
+import TestPage from './TestPage.jsx'
+import ReactPractice from './ReactPractice.jsx'
 
 const appRouter = createBrowserRouter([
   {
@@ -31,6 +32,14 @@ const appRouter = createBrowserRouter([
       {
         path: 'restaurant/:id',            // ✅ no leading slash in child
         element: <RestaurantMenu/>
+      },
+      {
+        path: 'test',
+        element:<TestPage/>
+      },
+      {
+        path: 'react',
+        element:<ReactPractice/>
       }
     ]
   }

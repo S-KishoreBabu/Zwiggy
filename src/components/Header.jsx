@@ -1,13 +1,15 @@
 import { useSelector } from 'react-redux';
 import logo from '../assets/logo.png'
-import { NavLink,Link } from 'react-router-dom';
-import { cartContext } from '../utils/UserContext';
-import { useContext } from 'react';
+import { NavLink } from 'react-router-dom';
+
 let Header = () => {
-    const cartItems = useSelector((store)=>store.cartSlice.items);
-    const {cartCount} = useContext(cartContext);
+    const cartItems = useSelector((store)=>store.cart.items);
+    
+    // Sum up the quantities of all items in the cart
+    const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
+
     return (
-        <header className="sticky top-0  flex justify-between items-center w-auto shadow-2xl bg-[rgba(255,255,255,0.8)] px-10 backdrop-blur z-10 "> 
+        <header className="sticky top-0 bg-[rgba(255,255,255,0.9)]  flex justify-between items-center w-auto shadow-lg  px-10 backdrop-blur z-10 "> 
             <NavLink  to="/">
                 <div className="logo hover:cursor-pointer ">
                     <img src={logo} className='h-25' alt="logo" />
@@ -15,13 +17,19 @@ let Header = () => {
             </NavLink>
             <div className="nav flex gap-10">
                 <div className="linkBox">
+                    <NavLink to="/react">React Practice</NavLink>
+                </div>
+                <div className="linkBox">
+                    <NavLink to="/test">Test</NavLink>
+                </div>
+                <div className="linkBox">
                     <NavLink to="/about">About us</NavLink>
                 </div>
                 <div className="linkBox">
                     <a href="#">Notification</a>
                 </div>
                 <div className="linkBox mr-3 font-bold">
-                    <NavLink to="/cart">Cart ({cartItems?.length})[{cartCount}]</NavLink>
+                    <NavLink to="/cart">Cart ({totalItems})</NavLink>
                 </div>
             </div>
         </header>
