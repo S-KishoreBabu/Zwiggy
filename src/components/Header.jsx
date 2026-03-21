@@ -9,7 +9,7 @@ let Header = () => {
     const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
 
     return (
-        <header className="sticky top-0 bg-[rgba(255,255,255,0.9)]  flex justify-between items-center w-auto shadow-lg  px-10 backdrop-blur z-10 "> 
+        <header className="sticky top-0 bg-[rgba(255,255,255,0.9)] dark:bg-[#0000009e] dark:text-white text-black flex justify-between items-center w-auto shadow-lg  px-10 backdrop-blur z-10 "> 
             <NavLink  to="/">
                 <div className="logo hover:cursor-pointer ">
                     <img src={logo} className='h-25' alt="logo" />

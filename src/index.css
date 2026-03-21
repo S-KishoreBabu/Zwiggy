@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 @theme {
   --animate-float: float 6s ease-in-out infinite;
   --animate-fade-in-up: fade-in-up 0.8s ease-out forwards;

@@ -16,7 +16,7 @@ const Stepper = ({dData}) => {
         setShowPopup(true);
         setTimeout(()=>{
             setShowPopup(false);
-        },1000)
+        },3000)
     }
 
     const decrement = () =>{

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Card,{PromotedCard} from './Card';
 import CardWrapperShimmer from './CardWrapperShimmer';
-import { data, Link } from 'react-router-dom';
+import {  Link } from 'react-router-dom';
 import useOnlineStatus from '../utils/useOnlineStatus';
 import { useQuery } from '@tanstack/react-query';
 
@@ -21,7 +21,7 @@ function CardWrapper({ searchVal }) {
   const RestaurantCardPromoted = PromotedCard(Card);
 
 
-  const {data:posts, isLoading, error, isFetching} = useQuery({
+  const {data:posts, isLoading, error} = useQuery({
     queryKey:['posts'],
     queryFn:getData
   });
